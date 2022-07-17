@@ -1,0 +1,89 @@
+<html>
+
+<head>
+    <title>Quiz app</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Answer To all Questions</h1>
+        <br>
+
+        <h4>
+            1 what is the country that have highest population
+        </h4>
+        <select name="question1" id="q1" title="pick your answer">
+    <option value="sri lanka">sri lanka</option>
+    <option value="india">india</option>
+    <option value="america">america</option>
+    <option value="china">china</option>
+</select>
+        <h4>2 what is the national sport in sri lanka</h4>
+        <select name="question2" id="q2" title="pick your answer">
+    <option value="cricket">cricket</option>
+    <option value="volleyball">volleyball</option>
+    <option value="elle">elle</option>
+    <option value="football">football</option>
+</select>
+        <h4>3 National flower in Sri Lanka</h4>
+        <select name="question3" id="q3" title="pick your answer">
+    <option value="Rose">Rose</option>
+    <option value="lotus">Lotus</option>
+    <option value="lily">lily</option>
+    <option value="Nil manel">Nil manel</option>
+</select><br><br>
+        <button type="submit" id="submitButton">Submit</button>
+        <script>
+            const correctAnswer = {
+                question1: "china",
+                question2: "volleyball",
+                question3: "Nil manel"
+            }
+            document.getElementById("submitButton").addEventListener("click", function submitAnswers(event) {
+                    //event.preventdefualt();
+                    console.log("work")
+                    const answersForQuestion1 = document.getElementById("q1").value
+                    const correctAnswerForQuestion1 = correctAnswer.question1;
+                    if (answersForQuestion1 === correctAnswerForQuestion1) {
+                        window.alert("you are correct for question 1")
+                    } else {
+                        window.alert("you are wrong for question 1")
+                    }
+                }
+
+            )
+
+            document.getElementById("submitButton").addEventListener("click", function submitAnswers(event) {
+                event.preventDefault();
+                console.log("work 2")
+                const answerForQuestion2 = document.getElementById("q2").value
+                const correctAnswerForQuestion2 = correctAnswer.question2; {
+                    if (answerForQuestion2 === correctAnswerForQuestion2) {
+                        window.alert("you are correct for question 2")
+                    } else {
+                        window.alert("you are wrong for question 2")
+                    }
+
+
+                }
+            })
+
+            document.getElementById("submitButton").addEventListener("click", function submitAnswers(event) {
+                event.preventDefault();
+                console.log("work 3")
+                const answerForQuestion3 = document.getElementById("q3").value
+                const correctAnswerForQuestion3 = correctAnswer.question3; {
+                    if (answerForQuestion3 === correctAnswerForQuestion3) {
+                        window.alert("you are correct for question 3")
+
+
+                    } else {
+                        window.alert("you are wrong for question 3")
+                    }
+                }
+            })
+        </script>
+    </div>
+</body>
+
+</html>
